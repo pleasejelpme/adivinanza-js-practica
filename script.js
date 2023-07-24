@@ -1,8 +1,12 @@
 let numero = Math.ceil(Math.random()*19)
 let numero_in = document.getElementById('numero_in')
 let mensaje = document.getElementById('mensaje')
+let intento = document.getElementById('intento')
+let intentos = 0
 
 function chequearResultado(){
+    intentos ++
+    intento.textContent = intentos
     let numero_ingresado = parseInt(numero_in.value)
 
     if (numero_ingresado < 1 || numero_ingresado > 20 || isNaN(numero_ingresado)) {
